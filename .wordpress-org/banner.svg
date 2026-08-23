@@ -1,0 +1,57 @@
+<svg width="1544" height="500" viewBox="0 0 1544 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Idara Business Hours — WordPress block">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1544" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fbfbf8"/>
+      <stop offset="1" stop-color="#f2efe7"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="120" y1="90" x2="440" y2="410" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#12897f"/>
+      <stop offset="1" stop-color="#0b544d"/>
+    </linearGradient>
+    <linearGradient id="hand" x1="280" y1="150" x2="280" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#ccfbf1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1544" height="500" fill="url(#paper)"/>
+
+  <!-- Faint oversized 8-point star, right side -->
+  <g opacity="0.05" fill="#0f766e">
+    <path d="M1300 -40 L1342 160 L1520 82 L1400 240 L1590 250 L1400 260 L1520 418 L1342 340 L1300 540 L1258 340 L1080 418 L1200 260 L1010 250 L1200 240 L1080 82 L1258 160 Z"/>
+  </g>
+
+  <!-- Left teal panel with clock -->
+  <rect x="96" y="90" width="320" height="320" rx="74" fill="url(#panel)"/>
+  <g opacity="0.10" fill="#ccfbf1" transform="translate(256,250) scale(0.82) translate(-128,-128)">
+    <path d="M128 26 L142 92 L204 66 L164 120 L226 128 L164 136 L204 190 L142 164 L128 230 L114 164 L52 190 L92 136 L30 128 L92 120 L52 66 L114 92 Z"/>
+  </g>
+  <circle cx="256" cy="250" r="94" fill="none" stroke="#ccfbf1" stroke-opacity="0.35" stroke-width="7"/>
+  <g stroke="#ccfbf1" stroke-width="8" stroke-linecap="round">
+    <line x1="256" y1="172" x2="256" y2="190"/>
+    <line x1="256" y1="310" x2="256" y2="328"/>
+    <line x1="178" y1="250" x2="196" y2="250"/>
+    <line x1="316" y1="250" x2="334" y2="250"/>
+  </g>
+  <g stroke="url(#hand)" stroke-linecap="round">
+    <line x1="256" y1="250" x2="216" y2="212" stroke-width="13"/>
+    <line x1="256" y1="250" x2="298" y2="204" stroke-width="11"/>
+  </g>
+  <path d="M256 230 L261 245 L276 240 L266 252 L281 250 L266 254 L276 266 L261 258 L256 273 L251 258 L236 266 L246 254 L231 250 L246 252 L236 240 L251 245 Z" fill="#fef3c7"/>
+
+  <!-- Text block -->
+  <text x="486" y="176" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="4" fill="#0f766e">IDARA STUDIO · WORDPRESS BLOCK</text>
+
+  <text x="482" y="290" font-family="Georgia, 'Times New Roman', serif" font-size="104" font-weight="700" fill="#0a0a0f">Business Hours</text>
+
+  <text x="486" y="352" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#4a4a55">Weekly opening hours with a live open-now status &amp; LocalBusiness schema.</text>
+  <text x="486" y="392" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#4a4a55">Lightweight, FSE-ready, and loads only where used.</text>
+
+  <!-- Open-now pill -->
+  <g transform="translate(486,420)">
+    <rect x="0" y="0" width="196" height="48" rx="24" fill="#ccfbf1"/>
+    <circle cx="28" cy="24" r="7" fill="#0f766e"/>
+    <text x="46" y="32" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#0b544d">Open now</text>
+  </g>
+</svg>

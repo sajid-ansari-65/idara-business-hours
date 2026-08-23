@@ -1,0 +1,151 @@
+/**
+ * Idara Business Hours — frontend styles (also loaded in the editor).
+ * Accent color is set inline as --idara-bh-accent by render.php / edit.js.
+ */
+
+.idara-bh {
+	--idara-bh-accent: #0f766e;
+	width: 100%;
+
+	.idara-bh-heading {
+		margin: 0 0 0.6em;
+		font-weight: 600;
+		font-size: 1.05em;
+		line-height: 1.3;
+	}
+
+	/* ── Status pill ──────────────────────────────────────── */
+	.idara-bh-status {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45em;
+		padding: 0.3em 0.7em;
+		margin-bottom: 0.8em;
+		border-radius: 999px;
+		font-size: 0.85em;
+		line-height: 1.3;
+		font-weight: 600;
+		background: rgba(100, 116, 139, 0.12);
+		color: #475569;
+
+		.idara-bh-status-dot {
+			width: 0.5em;
+			height: 0.5em;
+			border-radius: 50%;
+			background: currentcolor;
+			flex-shrink: 0;
+		}
+
+		.idara-bh-status-hint,
+		.idara-bh-status-sep {
+			font-weight: 400;
+			opacity: 0.85;
+		}
+
+		.idara-bh-status-hint:empty,
+		.idara-bh-status-hint:empty + .idara-bh-status-sep {
+			display: none;
+		}
+
+		&.is-open {
+			background: var(--idara-bh-accent);
+			background: color-mix(in srgb, var(--idara-bh-accent) 14%, transparent);
+			color: var(--idara-bh-accent);
+
+			.idara-bh-status-dot {
+				background: var(--idara-bh-accent);
+				box-shadow: 0 0 0 0 color-mix(in srgb, var(--idara-bh-accent) 60%, transparent);
+				animation: idara-bh-pulse 2s infinite;
+			}
+		}
+
+		&.is-closed {
+			background: rgba(100, 116, 139, 0.12);
+			color: #64748b;
+		}
+	}
+
+	/* ── Hours table ──────────────────────────────────────── */
+	.idara-bh-table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 0;
+		font-size: inherit;
+
+		th,
+		td {
+			padding: 0.5em 0.2em;
+			text-align: left;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+			vertical-align: top;
+		}
+
+		.idara-bh-day {
+			font-weight: 600;
+			white-space: nowrap;
+			padding-right: 1em;
+		}
+
+		.idara-bh-hours {
+			text-align: right;
+			font-variant-numeric: tabular-nums;
+		}
+
+		.idara-bh-today {
+
+			th,
+			td {
+				color: var(--idara-bh-accent);
+				font-weight: 700;
+			}
+
+			.idara-bh-day {
+				position: relative;
+			}
+		}
+
+		.idara-bh-row.is-closed-day {
+			opacity: 0.7;
+		}
+
+		.idara-bh-row:last-child th,
+		.idara-bh-row:last-child td {
+			border-bottom: 0;
+		}
+	}
+}
+
+@keyframes idara-bh-pulse {
+
+	0% {
+		box-shadow: 0 0 0 0 color-mix(in srgb, var(--idara-bh-accent) 55%, transparent);
+	}
+
+	70% {
+		box-shadow: 0 0 0 0.4em transparent;
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 transparent;
+	}
+}
+
+@media ( prefers-reduced-motion: reduce ) {
+
+	.idara-bh .idara-bh-status.is-open .idara-bh-status-dot {
+		animation: none;
+	}
+}
+
+/* screen-reader-only caption (in case the theme doesn't define it) */
+.idara-bh .screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+	word-wrap: normal !important;
+}

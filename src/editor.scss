@@ -1,0 +1,101 @@
+/**
+ * Idara Business Hours — editor-only styles.
+ */
+
+/* ── Block selection affordance ──────────────────────────── */
+.wp-block-idara-business-hours.idara-bh-editor {
+	outline: 1px dashed rgba(15, 118, 110, 0.35);
+	outline-offset: 6px;
+	border-radius: 2px;
+
+	.idara-bh-special-note {
+		display: block;
+		margin-top: 8px;
+		color: #757575 !important;
+		font-style: italic;
+	}
+}
+
+/* ── Inspector — shared bits ─────────────────────────────── */
+.idara-bh-section-label {
+	display: block;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #50575e;
+	margin-bottom: 8px;
+}
+
+.idara-bh-help {
+	display: block;
+	color: #757575 !important;
+	line-height: 1.5;
+}
+
+.idara-bh-toggle-group {
+	display: flex;
+	width: 100%;
+
+	.components-button {
+		flex: 1;
+		justify-content: center;
+	}
+}
+
+/* ── Weekly day rows ─────────────────────────────────────── */
+.idara-bh-day-row {
+	padding: 10px 0;
+	border-bottom: 1px solid #f0f0f1;
+
+	&:last-child {
+		border-bottom: 0;
+	}
+
+	&.is-closed {
+		opacity: 0.85;
+	}
+
+	.idara-bh-closed-tag {
+		display: block;
+		margin-top: 2px;
+		color: #999 !important;
+		font-style: italic;
+	}
+}
+
+/* ── Slot editor ─────────────────────────────────────────── */
+.idara-bh-slots {
+	margin-top: 6px;
+	padding-left: 2px;
+}
+
+.idara-bh-slot {
+	margin-bottom: 6px;
+
+	/* The inspector gives each field ~120px, and Chrome's type="time" control
+	   reserves room for its picker icon — without trimming the padding the
+	   value truncates to "09:00 /" instead of showing "09:00 AM". */
+	input[type="time"] {
+		padding-left: 6px;
+		padding-right: 2px;
+		font-size: 12px;
+	}
+}
+
+.idara-bh-add-slot {
+	padding-left: 0 !important;
+}
+
+/* ── Special hours ───────────────────────────────────────── */
+.idara-bh-special {
+	padding: 10px;
+	margin-bottom: 12px;
+	background: #f6f7f7;
+	border: 1px solid #e0e0e0;
+	border-radius: 6px;
+
+	/* Nested inside a padded card, the time fields are narrower still. */
+	.idara-bh-slot input[type="time"] {
+		padding-left: 4px;
+		font-size: 11px;
+	}
+}

@@ -1,0 +1,195 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "idara/business-hours",
+  "version": "1.0.0",
+  "title": "Business Hours",
+  "category": "widgets",
+  "icon": "clock",
+  "description": "Weekly business hours with a live open-now status, split shifts, special-day overrides, and optional LocalBusiness schema.",
+  "keywords": [
+    "business hours",
+    "opening hours",
+    "open now",
+    "schema",
+    "local seo"
+  ],
+  "textdomain": "idara-business-hours",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "days": {
+      "type": "array",
+      "default": [
+        {
+          "closed": false,
+          "slots": [
+            {
+              "open": "09:00",
+              "close": "17:00"
+            }
+          ]
+        },
+        {
+          "closed": false,
+          "slots": [
+            {
+              "open": "09:00",
+              "close": "17:00"
+            }
+          ]
+        },
+        {
+          "closed": false,
+          "slots": [
+            {
+              "open": "09:00",
+              "close": "17:00"
+            }
+          ]
+        },
+        {
+          "closed": false,
+          "slots": [
+            {
+              "open": "09:00",
+              "close": "17:00"
+            }
+          ]
+        },
+        {
+          "closed": false,
+          "slots": [
+            {
+              "open": "09:00",
+              "close": "17:00"
+            }
+          ]
+        },
+        {
+          "closed": true,
+          "slots": []
+        },
+        {
+          "closed": true,
+          "slots": []
+        }
+      ]
+    },
+    "specialHours": {
+      "type": "array",
+      "default": []
+    },
+    "heading": {
+      "type": "string",
+      "default": ""
+    },
+    "timeFormat": {
+      "type": "string",
+      "default": "12"
+    },
+    "showStatus": {
+      "type": "boolean",
+      "default": true
+    },
+    "highlightToday": {
+      "type": "boolean",
+      "default": true
+    },
+    "hideClosedDays": {
+      "type": "boolean",
+      "default": false
+    },
+    "accentColor": {
+      "type": "string",
+      "default": "#0f766e"
+    },
+    "timezoneOverride": {
+      "type": "string",
+      "default": ""
+    },
+    "showSchema": {
+      "type": "boolean",
+      "default": false
+    },
+    "businessType": {
+      "type": "string",
+      "default": "LocalBusiness"
+    },
+    "businessName": {
+      "type": "string",
+      "default": ""
+    },
+    "streetAddress": {
+      "type": "string",
+      "default": ""
+    },
+    "addressLocality": {
+      "type": "string",
+      "default": ""
+    },
+    "addressRegion": {
+      "type": "string",
+      "default": ""
+    },
+    "postalCode": {
+      "type": "string",
+      "default": ""
+    },
+    "addressCountry": {
+      "type": "string",
+      "default": ""
+    },
+    "telephone": {
+      "type": "string",
+      "default": ""
+    },
+    "priceRange": {
+      "type": "string",
+      "default": ""
+    },
+    "businessUrl": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "__experimentalDefaultControls": {
+        "text": true,
+        "background": false
+      }
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "spacing": {
+      "margin": [
+        "top",
+        "bottom"
+      ],
+      "padding": true
+    },
+    "align": [
+      "wide",
+      "full"
+    ],
+    "interactivity": true
+  },
+  "example": {
+    "attributes": {
+      "heading": "Opening Hours",
+      "showStatus": true
+    }
+  }
+}

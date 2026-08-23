@@ -1,0 +1,23 @@
+{
+	"name": "idara-business-hours",
+	"version": "1.0.0",
+	"description": "A lightweight Gutenberg block that displays weekly business hours with a live open-now status and LocalBusiness schema.",
+	"license": "GPL-2.0-or-later",
+	"files": [
+		"idara-business-hours.php",
+		"readme.txt",
+		"build/**",
+		"src/**"
+	],
+	"scripts": {
+		"build": "wp-scripts build --experimental-modules",
+		"start": "wp-scripts start --experimental-modules",
+		"lint:js": "wp-scripts lint-js",
+		"lint:css": "wp-scripts lint-style",
+		"format": "wp-scripts format",
+		"plugin-zip": "wp-scripts plugin-zip"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^30.0.0"
+	}
+}
