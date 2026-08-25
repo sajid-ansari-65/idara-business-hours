@@ -146,7 +146,7 @@ All pull requests welcome. Please test against WordPress 6.5+ and a block theme 
 
 ## About Idara
 
-**Idara** (إدارة) is an Arabic word meaning "studio" or "administration." It's a small plugin studio building single-purpose, carefully crafted Gutenberg blocks — one problem, one plugin.
+**Idara** (إدارة) is the Arabic word for "administration" or "management." Idara Studio is a one-person studio building single-purpose, carefully crafted Gutenberg blocks — one problem, one plugin.
 
 | Plugin | Description |
 |---|---|

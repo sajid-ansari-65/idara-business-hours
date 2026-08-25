@@ -16,7 +16,7 @@ Weekly business hours with a live "Open now" status plus optional LocalBusiness 
 
 It also emits optional **LocalBusiness schema.org markup** (JSON-LD) so search engines can show your hours directly in results.
 
-*Idara (إدارة) is an Arabic word meaning "studio" or "administration" — the brand behind a growing family of carefully crafted, single-purpose Gutenberg blocks.*
+*Idara (إدارة) is the Arabic word for "administration" or "management". Idara Studio is a one-person studio building a growing family of carefully crafted, single-purpose Gutenberg blocks.*
 
 = Why this and not a full block suite? =
 
