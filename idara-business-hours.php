@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name:       Idara Business Hours
- * Plugin URI:        https://idara-studio.vercel.app/plugins/business-hours
+ * Plugin URI:        https://idara.studio/plugins/business-hours
  * Description:       A lightweight Gutenberg block that displays weekly business hours with a live "Open now" status and optional LocalBusiness schema. FSE-ready, no bloat, loads only where used.
  * Version:           1.0.0
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author:            Mohammad Sajid Ansari
- * Author URI:        https://profiles.wordpress.org/sajidansari65/
+ * Author URI:        https://idara.studio
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       idara-business-hours
