@@ -18,6 +18,8 @@ It also emits optional **LocalBusiness schema.org markup** (JSON-LD) so search e
 
 *Idara (إدارة) is the Arabic word for "administration" or "management". Idara Studio is a one-person studio building a growing family of carefully crafted, single-purpose Gutenberg blocks.*
 
+Browse the full catalogue, live demos and per-block documentation at [idara.studio](https://idara.studio/plugins/business-hours).
+
 = Why this and not a full block suite? =
 
 Most block plugins ship 30+ blocks you'll never use, slowing your editor and your frontend. Idara plugins are deliberately small. This one loads its CSS and JavaScript **only on pages where the block is present** — never globally.
