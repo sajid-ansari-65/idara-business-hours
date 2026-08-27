@@ -6,15 +6,13 @@
 
 Weekly opening hours with a live "Open now / Closed" status and optional LocalBusiness schema. A lightweight, FSE-ready Gutenberg block that loads only where used — no bloat, no tracking.
 
-<!-- Uncomment these once the plugin is live on WordPress.org — until then they render as "not found".
 [![WordPress Plugin Version](https://img.shields.io/wordpress/plugin/v/idara-business-hours?style=flat-square&color=0f766e)](https://wordpress.org/plugins/idara-business-hours/)
 [![WordPress Plugin Downloads](https://img.shields.io/wordpress/plugin/dt/idara-business-hours?style=flat-square&color=0f766e)](https://wordpress.org/plugins/idara-business-hours/advanced/)
 [![WordPress Plugin Rating](https://img.shields.io/wordpress/plugin/stars/idara-business-hours?style=flat-square&color=0f766e)](https://wordpress.org/plugins/idara-business-hours/#reviews)
 [![WordPress Plugin Tested WP Version](https://img.shields.io/wordpress/plugin/tested/idara-business-hours?style=flat-square&color=0f766e)](https://wordpress.org/plugins/idara-business-hours/)
--->
 [![License: GPL v2](https://img.shields.io/badge/license-GPL--2.0-blue?style=flat-square)](https://www.gnu.org/licenses/gpl-2.0.html)
 
-**WordPress.org:** submitted, awaiting review
+**WordPress.org:** [wordpress.org/plugins/idara-business-hours](https://wordpress.org/plugins/idara-business-hours/)
 **Version:** 1.0.0 · **Requires WP:** 6.5+ · **Requires PHP:** 7.4+ · **License:** GPL-2.0-or-later
 
 ---
@@ -151,7 +149,7 @@ All pull requests welcome. Please test against WordPress 6.5+ and a block theme 
 | Plugin | Description |
 |---|---|
 | [Idara Reading Time](https://wordpress.org/plugins/idara-reading-time/) | Estimated reading time with an optional scroll progress bar |
-| Idara Business Hours | This plugin |
+| [Idara Business Hours](https://wordpress.org/plugins/idara-business-hours/) | This plugin |
 
 [WordPress.org profile](https://profiles.wordpress.org/sajidansari65/)
 
