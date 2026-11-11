@@ -6,7 +6,6 @@ import {
 	ToggleControl,
 	SelectControl,
 	Button,
-	ButtonGroup,
 	ColorPalette,
 	Flex,
 	FlexItem,
@@ -297,14 +296,23 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	/* Lightweight preview status (business timezone) */
 	const previewStatus = ( () => {
-		const tz = timezoneOverride || undefined;
-		const fmt = new Intl.DateTimeFormat( 'en-CA', {
-			timeZone: tz,
+		const fmtOptions = {
 			weekday: 'short',
 			hour: '2-digit',
 			minute: '2-digit',
 			hour12: false,
-		} );
+		};
+		let fmt;
+		try {
+			fmt = new Intl.DateTimeFormat( 'en-CA', {
+				...fmtOptions,
+				timeZone: timezoneOverride || undefined,
+			} );
+		} catch ( e ) {
+			// Unknown/invalid IANA zone (pasted markup, browser tz-data gap):
+			// preview in the browser zone instead of crashing the block.
+			fmt = new Intl.DateTimeFormat( 'en-CA', fmtOptions );
+		}
 		const parts = {};
 		for ( const p of fmt.formatToParts( new Date() ) ) {
 			parts[ p.type ] = p.value;
@@ -352,7 +360,14 @@ export default function Edit( { attributes, setAttributes } ) {
 					>
 						{ __( 'Time format', 'idara-business-hours' ) }
 					</Text>
-					<ButtonGroup className="idara-bh-toggle-group">
+					<div
+						className="idara-bh-toggle-group"
+						role="group"
+						aria-label={ __(
+							'Time format',
+							'idara-business-hours'
+						) }
+					>
 						<Button
 							variant={
 								timeFormat === '12' ? 'primary' : 'secondary'
@@ -373,7 +388,7 @@ export default function Edit( { attributes, setAttributes } ) {
 						>
 							{ __( '24-hour', 'idara-business-hours' ) }
 						</Button>
-					</ButtonGroup>
+					</div>
 
 					<Spacer marginTop={ 4 } marginBottom={ 2 } />
 

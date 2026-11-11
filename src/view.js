@@ -189,14 +189,24 @@ const { state } = store( 'idara/business-hours', {
 			const ctx = getContext();
 
 			const apply = () => {
-				const next = computeStatus( ctx );
+				let next;
+				try {
+					next = computeStatus( ctx );
+				} catch ( e ) {
+					// This browser can't resolve the business timezone (tz-data
+					// gap vs PHP). Keep the server-rendered status untouched.
+					return false;
+				}
 				ctx.isOpen = next.isOpen;
 				ctx.statusLabel = next.statusLabel;
 				ctx.statusHint = next.statusHint;
 				ctx.todayIndex = next.todayIndex;
+				return true;
 			};
 
-			apply();
+			if ( ! apply() ) {
+				return;
+			}
 			const timer = setInterval( apply, 30000 );
 			return () => clearInterval( timer );
 		},

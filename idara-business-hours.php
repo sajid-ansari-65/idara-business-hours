@@ -3,7 +3,7 @@
  * Plugin Name:       Idara Business Hours
  * Plugin URI:        https://idara.studio/plugins/business-hours
  * Description:       A lightweight Gutenberg block that displays weekly business hours with a live "Open now" status and optional LocalBusiness schema. FSE-ready, no bloat, loads only where used.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author:            Mohammad Sajid Ansari
@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'IDARA_BUSINESS_HOURS_VERSION', '1.0.0' );
+define( 'IDARA_BUSINESS_HOURS_VERSION', '1.0.1' );
 define( 'IDARA_BUSINESS_HOURS_PATH', plugin_dir_path( __FILE__ ) );
 
 /**

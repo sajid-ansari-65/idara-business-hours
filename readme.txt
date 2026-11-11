@@ -3,7 +3,7 @@ Contributors:      sajidansari65
 Tags:              business hours, opening hours, gutenberg block, local seo, fse
 Requires at least: 6.5
 Tested up to:      7.1
-Stable tag:        1.0.0
+Stable tag:        1.0.1
 Requires PHP:      7.4
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -102,6 +102,12 @@ https://github.com/sajid-ansari-65/idara-business-hours
 The `src/` directory contains the unminified JavaScript (ES modules, JSX) and SCSS. Run `npm install && npm run build` to compile.
 
 == Changelog ==
+
+= 1.0.1 =
+* Tested with WordPress 7.1.4.
+* Editor: the 12/24-hour toggle no longer uses the ButtonGroup component, which is deprecated in WordPress 6.8 and later. It looks and behaves the same.
+* Editor: an unrecognised timezone no longer stops the block from loading. The preview falls back to the browser's timezone.
+* Frontend: if a visitor's browser can't resolve the business timezone, the server-rendered open/closed status stays as it is, without a script error.
 
 = 1.0.0 =
 * Initial release
